@@ -1,6 +1,15 @@
 <script>
   export let src;
+  let imgHidden = false;
 </script>
+
+<img
+  {src}
+  class="poster"
+  alt="poster"
+  on:error={() => (imgHidden = true)}
+  style="display: {imgHidden ? 'none' : 'block'};"
+/>
 
 <style>
   .poster {
@@ -12,5 +21,3 @@
     object-fit: cover;
   }
 </style>
-
-<img {src} class="poster" alt="poster" onerror="this.style.display='none'" />
