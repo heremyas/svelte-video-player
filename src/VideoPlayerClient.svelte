@@ -83,8 +83,8 @@
   // VIDEO ELEMENT BINDINGS
   //-------------------------------------------------------------------------------------------------------------------
 
-  let videoPlayerElement;
-  let videoElement;
+  export let videoPlayerElement;
+  export let videoElement;
   let currentTime = 0;
   let duration;
   let buffered = []; // [{start, end}]
